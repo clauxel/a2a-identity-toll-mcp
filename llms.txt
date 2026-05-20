@@ -1,0 +1,15 @@
+# A2A Identity Toll MCP
+
+A2A Identity Toll is a paid remote MCP gate for caller identity, target agent scope, task intent, data class, policy verdicts, and audit receipts.
+
+Website: https://a2aidentitytoll.clauxel.com/
+Docs pattern reference: https://github.com/clauxel/MiroFish
+Primary keyword: A2A identity policy MCP
+Type: MCP
+Default plan: Team
+MCP endpoint: https://a2aidentitytoll.clauxel.com/mcp
+Server card: https://a2aidentitytoll.clauxel.com/server-card.json
+Registry name: com.clauxel.a2aidentitytoll/a2aidentitytoll-mcp
+Tools: evaluate_a2a_identity_policy, review_agent_scope, issue_identity_receipt, explain_denied_call, export_a2a_audit_log
+
+Public boundary: docs-only repository; no production source code or secrets.
