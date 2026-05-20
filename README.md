@@ -2,47 +2,44 @@
 
 Make every agent-to-agent call prove who asked, why, and under which scope.
 
-Paid remote MCP for A2A caller identity policy, scope review, structured allow/review/deny receipts, and audit history.
+A2A Identity Toll is a paid remote MCP gate for caller identity, target agent scope, task intent, data class, policy verdicts, and audit receipts.
 
-## Public Endpoints
+This is a public documentation project for A2A Identity Toll MCP. The structure is modeled after the public documentation pattern used by [MiroFish](https://github.com/clauxel/MiroFish): a short front door, a clear reading order, practical guides, reference pages, and public-safe architecture notes.
 
-- Website: https://a2aidentitytoll.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605
-- MCP endpoint: https://a2aidentitytoll.clauxel.com/mcp
+## Start Here
+
+- Website: https://a2aidentitytoll.clauxel.com/?utm_source=github&utm_medium=documentation&utm_campaign=a2aidentitytoll_public_docs&utm_content=readme_primary_home
+- Pricing: https://a2aidentitytoll.clauxel.com/pricing/?utm_source=github&utm_medium=documentation&utm_campaign=a2aidentitytoll_public_docs&utm_content=readme_pricing
+- Checkout: https://a2aidentitytoll.clauxel.com/checkout/?utm_source=github&utm_medium=documentation&utm_campaign=a2aidentitytoll_public_docs&utm_content=readme_checkout
+- Support: support@aigeamy.com
+
+## Remote MCP
+
+- Endpoint: https://a2aidentitytoll.clauxel.com/mcp
 - Server card: https://a2aidentitytoll.clauxel.com/server-card.json
 - Registry name: `com.clauxel.a2aidentitytoll/a2aidentitytoll-mcp`
+- Tools: `evaluate_a2a_identity_policy`, `review_agent_scope`, `issue_identity_receipt`, `explain_denied_call`, `export_a2a_audit_log`
 
-## Access
+## Reading Order
 
-This is a paid hosted remote MCP. Production calls require a bearer token issued from the product website.
+1. [Quickstart](guide/quickstart.md)
+2. [Evaluation guide](guide/evaluation.md)
+3. [Checkout and pricing](guide/checkout-and-pricing.md)
+4. [Workflow notes](features/workflow.md)
+5. [Public link reference](reference/links.md)
 
-```http
-Authorization: Bearer <token>
-```
+## Audience
 
-Unauthenticated browser visits to `/mcp` return a clear JSON error instead of internal details.
+agent platform teams, AI security reviewers, and A2A protocol adopters.
 
-## Tools
+## Capabilities
 
-- `evaluate_a2a_identity_policy`
-- `review_agent_scope`
-- `issue_identity_receipt`
-- `explain_denied_call`
-- `export_a2a_audit_log`
+- caller identity policy
+- scope review
+- structured verdict JSON
+- receipt archive
+- audit dashboard
 
-## Quick Start
+## Public-Safe Boundary
 
-1. Open the website and choose a plan.
-2. Create or request an API token.
-3. Add the endpoint to an MCP client that supports Streamable HTTP remote servers.
-4. Send JSON-RPC requests with the bearer token.
-
-## Useful Links
-
-- Product page: https://a2aidentitytoll.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605
-- Pricing: https://a2aidentitytoll.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605#pricing
-- Server card: https://a2aidentitytoll.clauxel.com/server-card.json
-- MCP endpoint: https://a2aidentitytoll.clauxel.com/mcp
-
-## Status
-
-This repository is a public documentation and directory-submission reference for the hosted service. It does not contain the private production source code.
+This repository does not contain production source code, credentials, payment configuration, Cloudflare configuration, customer records, private analytics, or local machine paths.
