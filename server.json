@@ -1,13 +1,11 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.clauxel.a2aidentitytoll/a2aidentitytoll-mcp",
-  "description": "A2A Identity Toll is a paid remote MCP gate for caller identity, target agent scope, task intent, data class, policy verdicts, and audit receipts.",
+  "title": "A2A Identity Toll MCP",
+  "description": "Paid remote MCP for A2A caller identity policy, scope review, structured allow/review/deny receipts, and audit history.",
   "version": "1.0.0",
-  "website_url": "https://a2aidentitytoll.clauxel.com/",
-  "repository": {
-    "url": "https://github.com/clauxel/a2a-identity-toll-mcp",
-    "source": "github"
-  },
+  "websiteUrl": "https://a2aidentitytoll.clauxel.com/",
+  "documentationUrl": "https://github.com/clauxel/a2a-identity-toll-mcp",
+  "serverCardUrl": "https://a2aidentitytoll.clauxel.com/server-card.json",
   "remotes": [
     {
       "type": "streamable-http",
@@ -15,17 +13,15 @@
       "headers": [
         {
           "name": "Authorization",
-          "description": "Bearer token from the product website.",
-          "is_required": true,
-          "is_secret": true
+          "description": "Bearer token from the product website."
         }
       ]
     }
   ],
-  "_meta": {
-    "io.modelcontextprotocol.registry/publisher-provided": {
-      "title": "A2A Identity Toll MCP",
-      "server_card_url": "https://a2aidentitytoll.clauxel.com/server-card.json"
-    }
-  }
+  "tags": [
+    "a2a",
+    "identity-policy",
+    "agent-security",
+    "remote-mcp"
+  ]
 }
